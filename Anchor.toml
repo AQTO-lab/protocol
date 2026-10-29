@@ -1,0 +1,24 @@
+skip_local_validator = true
+
+[toolchain]
+
+[features]
+resolution = true
+skip-lint = false
+
+# Program IDs are placeholders: `anchor keys sync` overwrites them (and declare_id! in lib.rs)
+# with the ID of target/deploy/aqto_protocol-keypair.json.
+[programs.localnet]
+aqto_protocol = "AM95AhrTcnLgP3eFYwQBaxczBi3CWeFRQQN9CrnQBUQb"
+
+[programs.devnet]
+aqto_protocol = "AM95AhrTcnLgP3eFYwQBaxczBi3CWeFRQQN9CrnQBUQb"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/solflare-wallet.json"
+
+[scripts]
+test = "cargo test"
+
+[hooks]
